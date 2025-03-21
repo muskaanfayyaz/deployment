@@ -11,6 +11,6 @@ jokes = [
     "Why do cows have hooves instead of feet? Because they lactose!"
 ]
 
-@app.get("/randomjokes")
+@app.get("/jokes")
 def get_random_joke():
     return {"joke": random.choice(jokes)}
