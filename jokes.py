@@ -11,6 +11,10 @@ jokes = [
     "Why do cows have hooves instead of feet? Because they lactose!"
 ]
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Jokes API! Use /jokes to get a random joke."}
+
 @app.get("/jokes")
 def get_random_joke():
     return {"joke": random.choice(jokes)}
